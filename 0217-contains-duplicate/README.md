@@ -1,3 +1,5 @@
+Use a hash set to track seen numbers: iterate through the array and for each number, check if it's already in the set (return true if so), otherwise add it to the set. If you finish the loop without finding duplicates, return false.
+
 <h2><a href="https://leetcode.com/problems/contains-duplicate">217. Contains Duplicate</a></h2><h3>Easy</h3><hr><p>Given an integer array <code>nums</code>, return <code>true</code> if any value appears <strong>at least twice</strong> in the array, and return <code>false</code> if every element is distinct.</p>
 
 <p>&nbsp;</p>
