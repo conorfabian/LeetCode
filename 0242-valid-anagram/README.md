@@ -1,3 +1,5 @@
+Build character frequency maps (hash maps) for both strings, then compare them for equality. If the frequency counts match for all characters, the strings are anagrams.
+
 <h2><a href="https://leetcode.com/problems/valid-anagram">242. Valid Anagram</a></h2><h3>Easy</h3><hr><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> if <code>t</code> is an <span data-keyword="anagram">anagram</span> of <code>s</code>, and <code>false</code> otherwise.</p>
 
 <p>&nbsp;</p>
