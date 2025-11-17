@@ -1,3 +1,10 @@
+**Implementation Note:** Create two arrays to store prefix and suffix products. First pass: build prefix products (product of all elements before index i). Second pass: build suffix products (product of all elements after index i). Final result: multiply prefix[i] * suffix[i] for each position to get the product of all elements except nums[i].
+
+**Time Complexity:** O(n) - three separate passes through the array  
+**Space Complexity:** O(n) - two additional arrays for prefix and suffix products
+
+---
+
 <h2><a href="https://leetcode.com/problems/product-of-array-except-self/">238. Product of Array Except Self</a></h2><h3>Medium</h3><hr><p>Given an integer array <code>nums</code>, return <em>an array</em> <code>answer</code> <em>such that</em> <code>answer[i]</code> <em>is equal to the product of all the elements of</em> <code>nums</code> <em>except</em> <code>nums[i]</code>.</p>
 
 <p>The product of any prefix or suffix of <code>nums</code> is <strong>guaranteed</strong> to fit in a <strong>32-bit</strong> integer.</p>
