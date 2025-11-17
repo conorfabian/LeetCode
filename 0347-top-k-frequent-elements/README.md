@@ -1,3 +1,10 @@
+**Implementation Note:** Use bucket sort approach: first count frequencies with a hash map, then create an array of buckets where index represents frequency. Place each number into the bucket corresponding to its frequency, then iterate from highest frequency buckets downward to collect the top k elements.
+
+**Time Complexity:** O(n) - counting frequencies + bucket placement + collecting results  
+**Space Complexity:** O(n) - hash map for counts + frequency buckets array
+
+---
+
 <h2><a href="https://leetcode.com/problems/top-k-frequent-elements/">347. Top K Frequent Elements</a></h2><h3>Medium</h3><hr><p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the</em> <code>k</code> <em>most frequent elements</em>. You may return the answer in <strong>any order</strong>.</p>
 
 <p>&nbsp;</p>
