@@ -1,3 +1,10 @@
+**Implementation Note:** Use two pointers starting from both ends of the string. Skip non-alphanumeric characters by advancing the pointers inward, then compare the lowercase versions of the characters at both pointers. If any pair doesn't match, it's not a palindrome; otherwise continue until pointers meet.
+
+**Time Complexity:** O(n) - single pass through the string  
+**Space Complexity:** O(1) - only using two pointer variables
+
+---
+
 <h2><a href="https://leetcode.com/problems/valid-palindrome/">125. Valid Palindrome</a></h2><h3>Easy</h3><hr><p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>
 
 <p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>
