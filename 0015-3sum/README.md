@@ -1,3 +1,9 @@
+**Implementation Note:** Sort the array first, then for each element, use two pointers (left and right) to find pairs that sum to the negative of the current element. Move pointers based on whether the current sum is too small (move left pointer right) or too large (move right pointer left). Handle duplicates by checking if the triplet already exists in results before adding.
+
+**Time Complexity:** O(n²) - O(n log n) for sorting + O(n²) for nested loops with two pointers
+
+---
+
 <h2><a href="https://leetcode.com/problems/3sum/">15. 3Sum</a></h2><h3>Medium</h3><hr><p>Given an integer array nums, return all the triplets <code>[nums[i], nums[j], nums[k]]</code> such that <code>i != j</code>, <code>i != k</code>, and <code>j != k</code>, and <code>nums[i] + nums[j] + nums[k] == 0</code>.</p>
 
 <p>Notice that the solution set must not contain duplicate triplets.</p>
