@@ -1,3 +1,10 @@
+**Implementation Note:** Use a hash map to store each number and its index as you iterate through the array. For each element, calculate the complement (target - current number) and check if it already exists in the hash map. If found, return both indices; otherwise, add the current number and index to the hash map.
+
+**Time Complexity:** O(n) - single pass through the array  
+**Space Complexity:** O(n) - hash map storage in worst case
+
+---
+
 <h2><a href="https://leetcode.com/problems/two-sum">1. Two Sum</a></h2><h3>Easy</h3><hr><p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
 
 <p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>
