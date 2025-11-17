@@ -1,7 +1,6 @@
 **Implementation Note:** Use a hash map where the key is the sorted characters of each string (anagrams will have the same sorted key) and the value is a list of all strings that share that key. Iterate through all strings, sort each one to create the key, and group them accordingly.
 
-**Time Complexity:** O(n * k log k) - where n is the number of strings and k is the maximum length of a string (due to sorting each string)  
-**Space Complexity:** O(n * k) - hash map storage for all strings
+**Time Complexity:** O(m) - where m is the number of strings and n is the length of the longest string.
 
 ---
 
