@@ -1,3 +1,10 @@
+**Implementation Note:** Use two pointers (left and right) starting from both ends of the array. Track the maximum height seen so far from each side. Move the pointer with the smaller maximum inward, updating its maximum and adding trapped water (current max - current height) to the result. The key insight is that water level at any position is determined by the minimum of the maximum heights on both sides.
+
+**Time Complexity:** O(n) - single pass with two pointers  
+**Space Complexity:** O(1) - only using constant extra space
+
+---
+
 <h2><a href="https://leetcode.com/problems/trapping-rain-water/">42. Trapping Rain Water</a></h2><h3>Hard</h3><hr><p>Given <code>n</code> non-negative integers representing an elevation map where the width of each bar is <code>1</code>, compute how much water it can trap after raining.</p>
 
 <p>&nbsp;</p>
