@@ -1,3 +1,10 @@
+**Implementation Note:** Use a set for O(1) lookups. For each number, check if it's the start of a sequence (num-1 not in set). If it is, count consecutive numbers forward (num+1, num+2, etc.) until the sequence breaks. Track the maximum sequence length found.
+
+**Time Complexity:** O(n) - each number is visited at most twice (once in outer loop, once in inner while loop)  
+**Space Complexity:** O(n) - set storage
+
+---
+
 <h2><a href="https://leetcode.com/problems/longest-consecutive-sequence/">128. Longest Consecutive Sequence</a></h2><h3>Medium</h3><hr><p>Given an unsorted array of integers <code>nums</code>, return <em>the length of the longest consecutive elements sequence.</em></p>
 
 <p>You must write an algorithm that runs in&nbsp;<code>O(n)</code>&nbsp;time.</p>
