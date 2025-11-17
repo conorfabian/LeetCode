@@ -1,3 +1,10 @@
+**Implementation Note:** Use a hash map where the key is the sorted characters of each string (anagrams will have the same sorted key) and the value is a list of all strings that share that key. Iterate through all strings, sort each one to create the key, and group them accordingly.
+
+**Time Complexity:** O(n * k log k) - where n is the number of strings and k is the maximum length of a string (due to sorting each string)  
+**Space Complexity:** O(n * k) - hash map storage for all strings
+
+---
+
 <h2><a href="https://leetcode.com/problems/group-anagrams">49. Group Anagrams</a></h2><h3>Medium</h3><hr><p>Given an array of strings <code>strs</code>, group the <span data-keyword="anagram">anagrams</span> together. You can return the answer in <strong>any order</strong>.</p>
 
 <p>&nbsp;</p>
