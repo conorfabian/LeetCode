@@ -1,3 +1,10 @@
+**Implementation Note:** Use two parallel stacks: one for the actual values and another to track the minimum value at each level. When pushing, add the value to the main stack and add the current minimum (either the new value or the previous minimum, whichever is smaller) to the min stack. When popping, remove from both stacks simultaneously to maintain synchronization.
+
+**Time Complexity:** O(1) - all operations (push, pop, top, getMin)  
+**Space Complexity:** O(n) - two stacks of size n
+
+---
+
 <h2><a href="https://leetcode.com/problems/min-stack/?envType=problem-list-v2&envId=nj0ylarm">155. Min Stack</a></h2><h3>Medium</h3><hr><p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>
 
 <p>Implement the <code>MinStack</code> class:</p>
