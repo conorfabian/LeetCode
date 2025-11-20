@@ -1,3 +1,10 @@
+**Implementation Note:** Use sliding window with two pointers and a character frequency map. Expand the right pointer to include new characters, and shrink from the left when the window becomes invalid (window_size - max_frequency > k). The key insight is that we need at most k replacements to make all characters in the window the same as the most frequent character.
+
+**Time Complexity:** O(n) - each character is visited at most twice (once by right pointer, once by left pointer)  
+**Space Complexity:** O(1) - frequency map stores at most 26 uppercase English letters
+
+---
+
 <h2><a href="https://leetcode.com/problems/longest-repeating-character-replacement/?envType=problem-list-v2&envId=nj0ylarm">424. Longest Repeating Character Replacement</a></h2><h3>Medium</h3><hr><p>You are given a string <code>s</code> and an integer <code>k</code>. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most <code>k</code> times.</p>
 
 <p>Return <em>the length of the longest substring containing the same letter you can get after performing the above operations</em>.</p>
