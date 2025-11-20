@@ -5,18 +5,14 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        s1, t1 = {}, {}
+        if len(s) != len(t):
+            return False
 
-        for char in s:
-            if char in s1:
-                s1[char] += 1
-            else:
-                s1[char] = 1
+        s_dict = {}
+        t_dict = {}
 
-        for char in t:
-            if char in t1:
-                t1[char] += 1
-            else:
-                t1[char] = 1
+        for i in range(len(s)):
+            s_dict[s[i]] = 1 + s_dict.get(s[i], 0)
+            t_dict[t[i]] = 1 + t_dict.get(t[i], 0)
 
-        return s1 == t1
+        return s_dict == t_dict
