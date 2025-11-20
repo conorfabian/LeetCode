@@ -1,3 +1,10 @@
+**Implementation Note:** Use a stack to track opening brackets. When encountering an opening bracket, push it onto the stack. When encountering a closing bracket, check if the stack is empty (invalid) or if the top of the stack matches the corresponding opening bracket - if so, pop it; otherwise, return false. At the end, the stack should be empty for a valid string.
+
+**Time Complexity:** O(n) - single pass through the string  
+**Space Complexity:** O(n) - stack storage in worst case (all opening brackets)
+
+---
+
 <h2><a href="https://leetcode.com/problems/valid-parentheses">20. Valid Parentheses</a></h2><h3>Easy</h3><hr><p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
 
 <p>An input string is valid if:</p>
