@@ -1,3 +1,10 @@
+**Implementation Note:** Use two pointers (left and right) to maintain search bounds. Calculate the middle index and compare with target: if target is larger, move left pointer to mid+1; if smaller, move right pointer to mid-1; if equal, return the index. Continue until pointers cross.
+
+**Time Complexity:** O(log n) - halving search space each iteration  
+**Space Complexity:** O(1) - constant extra space
+
+---
+
 <h2><a href="https://leetcode.com/problems/binary-search">704. Binary Search</a></h2><h3>Easy</h3><hr><p>Given an array of integers <code>nums</code> which is sorted in ascending order, and an integer <code>target</code>, write a function to search <code>target</code> in <code>nums</code>. If <code>target</code> exists, then return its index. Otherwise, return <code>-1</code>.</p>
 
 <p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>
