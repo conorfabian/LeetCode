@@ -1,3 +1,10 @@
+**Implementation Note:** Use two pointers (left for buy, right for sell) to track the minimum buy price and maximum profit. Iterate through prices with the right pointer, updating the maximum profit at each step. When you find a price lower than the current buy price, move the left pointer to that position since buying at a lower price will always yield better results.
+
+**Time Complexity:** O(n) - single pass through the array  
+**Space Complexity:** O(1) - only using constant extra space
+
+---
+
 <h2><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock">121. Best Time to Buy and Sell Stock</a></h2><h3>Easy</h3><hr><p>You are given an array <code>prices</code> where <code>prices[i]</code> is the price of a given stock on the <code>i<sup>th</sup></code> day.</p>
 
 <p>You want to maximize your profit by choosing a <strong>single day</strong> to buy one stock and choosing a <strong>different day in the future</strong> to sell that stock.</p>
