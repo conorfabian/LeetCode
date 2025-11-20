@@ -1,3 +1,10 @@
+**Implementation Note:** Use the sliding window technique with two pointers (left and right) and a set to track characters in the current window. Expand the right pointer to grow the window, and when a duplicate is found, shrink from the left until the duplicate is removed. Track the maximum window size throughout.
+
+**Time Complexity:** O(n) - each character is visited at most twice (once by right pointer, once by left pointer)  
+**Space Complexity:** O(min(m, n)) - where m is the size of the character set and n is the length of the string
+
+---
+
 <h2><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/?envType=problem-list-v2&envId=nj0ylarm">3. Longest Substring Without Repeating Characters</a></h2><h3>Medium</h3><hr><p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword="substring-nonempty"><strong>substring</strong></span> without duplicate characters.</p>
 
 <p>&nbsp;</p>
