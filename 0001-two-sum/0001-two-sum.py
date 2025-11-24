@@ -5,10 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        vals = {}
+        seen = {}
 
-        for i in range(len(nums)):
-            diff = target - nums[i]
-            if diff in vals:
-                return [i, vals[diff]]
-            vals[nums[i]] = i
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in seen:
+                return [seen[diff], i]
+            seen[num] = i
