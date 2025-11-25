@@ -6,25 +6,20 @@ class Solution(object):
         :rtype: List[int]
         """
         counts = {}
-        frequency = [[] for i in range(len(nums))]
-
         for num in nums:
-            if num in counts:
-                counts[num] += 1
-            else:
-                counts[num] = 1
+            counts[num] = 1 + counts.get(num, 0)
 
-        for val in counts:
-            frequency[counts[val] - 1].append(val)
+        frequencies = [[] for i in range(len(nums) + 1)]
+        for num, count in counts.items():
+            frequencies[count].append(num)
 
-        results = []
-        i = len(nums) - 1
-        while k != 0:
-            for num in frequency[i]:
-                if k == 0:
-                    break
-                results.append(num)
-                k -= 1
-            i -= 1
+        res = []
+        for freq in frequencies[::-1]:
+            if k <= 0:
+                break
+            elif freq:
+                for num in freq:
+                    res.append(num)
+                    k -= 1
 
-        return results
+        return res
