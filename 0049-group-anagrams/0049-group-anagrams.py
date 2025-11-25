@@ -10,4 +10,4 @@ class Solution(object):
             key = ''.join(sorted(s))
             anagrams[key].append(s)
 
-        return list(anagrams.values())
+        return anagrams.values()
