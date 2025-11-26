@@ -4,33 +4,26 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
-        rows = [[] for i in range(9)]
-        cols = [[] for i in range(9)]
-        box = defaultdict(list)
+        rows = defaultdict(set)
+        cols = defaultdict(set)
+        boxes = defaultdict(set)
 
-        # check columns
-        for i in range(9):
-            for j in range(9):
+        for i in range(len(board)):
+            for j in range(len(board[0])):
                 if board[i][j] == ".":
                     continue
-                
-                # check rows
+                    
                 if board[i][j] in rows[i]:
                     return False
-                else:
-                    rows[i].append(board[i][j])
-                
-                # check columns
+                rows[i].add(board[i][j])
+
                 if board[i][j] in cols[j]:
                     return False
-                else:
-                    cols[j].append(board[i][j])
+                cols[j].add(board[i][j])
 
-                # check boxes
-                key = ( i // 3, j // 3 )
-                if board[i][j] in box[key]:
+                box = (i // 3, j // 3)
+                if board[i][j] in cols[box]:
                     return False
-                else:
-                    box[key].append(board[i][j])
+                cols[box].add(board[i][j])
 
         return True
