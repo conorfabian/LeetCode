@@ -14,7 +14,7 @@ class Solution(object):
 
             if s[l].lower() != s[r].lower():
                 return False
-
+            
             l += 1
             r -= 1
 
