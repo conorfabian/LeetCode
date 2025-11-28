@@ -4,13 +4,12 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        l, r = 0, 0
-        res = float("-inf")
+        l = 0
+        res = float('-inf')
 
-        while r < len(prices):
-            res = max(res, prices[r] - prices[l])
-            if prices[r] < prices[l]:
-                l = r
-            r += 1
+        for i in range(len(prices)):
+            res = max(res, prices[i] - prices[l])
+            if prices[i] < prices[l]:
+                l = i
 
         return res
