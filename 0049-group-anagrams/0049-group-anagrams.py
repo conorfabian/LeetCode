@@ -4,10 +4,17 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        anagrams = defaultdict(list)
+        hashMap = defaultdict(list)
 
         for s in strs:
-            key = ''.join(sorted(s))
-            anagrams[key].append(s)
+            counts = [0] * 26
+            for c in s: # ord(c) - ord('a')
+                key = ord(c) - ord('a')
+                counts[key] += 1
+            hashMap[tuple(counts)].append(s)
 
-        return anagrams.values()
+        res = []
+        for key in hashMap:
+            res.append(hashMap[key])
+
+        return res
