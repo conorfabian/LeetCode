@@ -5,13 +5,15 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        l, r = 0, len(numbers) - 1
 
-        while l < r:
-            val = numbers[l] + numbers[r]
-            if val > target:
-                r -= 1
-            elif val < target:
-                l += 1
-            else:
-                return [l+1, r+1]
+        for i, num in enumerate(numbers):
+            diff = target - num
+            l, r = i + 1, len(numbers) - 1
+            while l <= r:
+                m = ((r - l) // 2) + l
+                if numbers[m] < diff:
+                    l = m + 1
+                elif numbers[m] > diff:
+                    r = m - 1
+                else:
+                    return [i+1, m+1]
