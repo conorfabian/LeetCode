@@ -9,17 +9,17 @@ class Solution(object):
         for num in nums:
             counts[num] = 1 + counts.get(num, 0)
 
-        frequencies = [[] for i in range(len(nums) + 1)]
-        for num, count in counts.items():
-            frequencies[count].append(num)
+        frequencies = [[] for i in range(len(nums))]
+        for key, count in counts.items():
+            frequencies[count-1].append(key)
+        print(frequencies)
 
         res = []
-        for freq in frequencies[::-1]:
+        for frequency in frequencies[::-1]:
+            for num in frequency:
+                res.append(num)
+                k -= 1
             if k <= 0:
                 break
-            elif freq:
-                for num in freq:
-                    res.append(num)
-                    k -= 1
 
         return res
