@@ -5,19 +5,19 @@ class Solution(object):
         :rtype: List[int]
         """
         pre = [1] * len(nums)
-        prod = 1
+        product = 1
         for i, num in enumerate(nums):
-            pre[i] = prod
-            prod *= num
+            pre[i] = product
+            product *= num
 
-        post = [1] * len(nums)
-        prod = 1
+        suf = [1] * len(nums)
+        product = 1
         for i in range(len(nums) - 1, -1, -1):
-            post[i] = prod
-            prod *= nums[i]
+            suf[i] = product
+            product *= nums[i]
 
         res = []
         for i in range(len(nums)):
-            res.append(pre[i] * post[i])
+            res.append(pre[i] * suf[i])
 
         return res
